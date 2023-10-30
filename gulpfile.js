@@ -2,7 +2,7 @@
 import gulp from "gulp";
 // Импорт общих плагинов
 import { plugins } from "./config/gulp-plugins.js";
-// Импорт путей
+// Импорт путей упти к файлам и папкам
 import { path } from "./config/gulp-settings.js";
 
 // Передаем значения в глобальную переменную
@@ -16,7 +16,7 @@ global.app = {
 	plugins: plugins
 }
 
-// Импорт задач
+// Импорт задач(функции выполняемых задач)
 import { reset } from "./config/gulp-tasks/reset.js";
 import { html } from "./config/gulp-tasks/html.js";
 import { css } from "./config/gulp-tasks/css.js";
@@ -33,7 +33,7 @@ import { otfToTtf, ttfToWoff, fonstStyle } from "./config/gulp-tasks/fonts.js";
 const fonts = gulp.series(reset, otfToTtf, ttfToWoff, fonstStyle);
 // Основные задачи будем выполнять параллельно после обработки шрифтов
 const devTasks = gulp.parallel(fonts, gitignore);
-// Основные задачи будем выполнять параллельно после обработки шрифтов
+// Основные задачи будем выполнять последовательно после обработки шрифтов
 const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, images, gitignore));
 
 // Экспорт задач

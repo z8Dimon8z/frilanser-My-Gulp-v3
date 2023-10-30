@@ -3,12 +3,12 @@ import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 
 // Пути к папке с исходниками и папке с результатом
-const buildFolder = `./dist`;
+const buildFolder = `./dist`; // можно здесь переминовать в название текушего проекта
 const srcFolder = `./src`;
 
 // Пути к папкам и файлам проекта
 export const path = {
-	build: {
+	build: { // пути к папкам с результатам
 		html: `${buildFolder}/`,
 		js: `${buildFolder}/js/`,
 		css: `${buildFolder}/css/`,
@@ -16,12 +16,12 @@ export const path = {
 		fonts: `${buildFolder}/fonts/`,
 		files: `${buildFolder}/files/`
 	},
-	src: {
+	src: { // пути к папкам проекта(работаем здесь)
 		html: `${srcFolder}/*.html`,
 		pug: `${srcFolder}/pug/*.pug`,
 		js: `${srcFolder}/js/app.js`,
 		scss: `${srcFolder}/scss/style.scss`,
-		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`, // файлы только с определенным расширением
 		svg: `${srcFolder}/img/**/*.svg`,
 		fonts: `${srcFolder}/fonts/*.*`,
 		files: `${srcFolder}/files/**/*.*`, // слидим за всеми файлами в files
