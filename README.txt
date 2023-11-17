@@ -15,7 +15,7 @@
 !!!
 Ощибка del плагин установить старую версию плагина (Мне удалось решить через npm install del@6)
 
-Насчет ощибки swiper (не находит подключаемые модули) установка более старой версии swipera 2021 года 7.2.0 (решена перподключением swipera были измениения в новой версии) также ушла ощибка при сужении браузера (Uncaught runtime errors resizeObserver loop completed with undelivered notificftions)
+Насчет ощибки swiper (не находит подключаемые модули) установка более старой версии swipera ^11.0.4 (решена перподключением swipera были измениения в новой версии) также ушла ощибка при сужении браузера (Uncaught runtime errors resizeObserver loop completed with undelivered notificftions)
 
 //---------
 Команды терминала
